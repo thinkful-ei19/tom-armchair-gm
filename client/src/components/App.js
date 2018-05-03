@@ -3,7 +3,7 @@ import { Route, withRouter } from 'react-router-dom';
 import LandingPage from './landing-page';
 import CheatSheet from './CheatSheet'
 import { connect } from 'react-redux';
-
+import './App.css'
 
 
 export class App extends React.Component {

@@ -10,12 +10,10 @@ export default class BestAvailablePlayersByPosition extends React.Component {
     const fields = ['Tier', 'Name', 'Bye'];
 
     return (
-      <div>
-        <div>
-          <i></i> Top Picks By Position
-      </div>
+      <div className='BestPosition'>
+        <h1 className='PositionTitle'>Best Available By Position</h1> 
 
-        <div>
+        <div className='column2'>
           <span>Runningbacks</span>
           <AvailablePlayers
             fields={fields}
@@ -26,7 +24,7 @@ export default class BestAvailablePlayersByPosition extends React.Component {
           />
         </div>
 
-        <div>
+        <div className='column2'>
           <span>Wide Receivers</span>
           <AvailablePlayers
             fields={fields}
@@ -37,7 +35,7 @@ export default class BestAvailablePlayersByPosition extends React.Component {
           />
         </div>
 
-        <div>
+        <div className='column3'>
           <span>Quarterbacks</span>
           <AvailablePlayers
             fields={fields}
@@ -48,7 +46,7 @@ export default class BestAvailablePlayersByPosition extends React.Component {
           />
         </div>
 
-        <div>
+        <div className='column3'>
           <span>Tightends</span>
           <AvailablePlayers
             fields={fields}

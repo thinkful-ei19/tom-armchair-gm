@@ -9,7 +9,6 @@ import { fetchPlayers, searchPlayerSuccess, draftPlayerSuccess, undoPlayerSucces
 import Spinner from 'react-spinkit';
 import AvailablePlayers from './AvailablePlayers';
 import NFLTable from './NFLTable'
-import './CheatSheet.css'
 export class CheatSheet extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchPlayers());
@@ -30,7 +29,8 @@ export class CheatSheet extends React.Component {
       return (<div className='row'>error fetching rankings...</div>)
     }
     return (
-      <div className='row'>
+      
+      <div className='row cheatSheet'>
         <BestAvailablePlayers
           players={this.props.filteredPlayers}
           draft={(player) => this.props.dispatch(draftPlayerSuccess(player))}

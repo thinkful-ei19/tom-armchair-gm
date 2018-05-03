@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-image: url('https://i1.wp.com/accjfl.com/wp-content/uploads/2017/08/American-football-ball-cool-wallpapers-wallpaper-desktop-images-background-photos-download-hd-free-iphone-mac-3614x2708.jpg?ssl=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+      width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+#main {
+     min-height: 100vh;
+    
+}
+.home{
+
+}
+
+.grad{
+	display: block;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header {
+    margin-top: 10%;
+    margin-left: 30%;
+
+    
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+    font-weight: 200;
+    font-weight: bolder;
+}
+
+.header div span{
+    color: #5379fa !important;
+    font-weight: bolder;
+}
+
+.login{
+    display: block;
+    margin-left: 35%
+
+    
+}
+/*  ===========Cheat Sheet================ */
+
+
+.cheatSheet {
+    background-color: #fff;
+    margin:0; 
+    font-family:Arial, verdana, sans-serif;
+    min-height: 100vh;
+    background-color: white;
+
+}
+table {
+    display: table;
+    font-family: 'Courier New', Courier, monospace;
+    table-layout: auto;
+    width:100%;
+    height:100%;
+    font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
+    font-size:12px;
+    padding: 0 4px 0 4px;
+
+}
+
+tbody {
+    border: 1px solid black;
+}
+
+tbody :hover {
+    background-color: beige;
+}
+
+tr {
+   border:2px solid black;
+       display: table-row;
+}
+
+
+.row {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.Overall {
+  height: 250px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+}
+
+.BestPostiion {
+    float: left;
+    
+}
+
+.column2 {
+    float: left;
+  margin-bottom: 5px;
+}
+.column3 {
+    float: left;
+    margin-bottom: 5px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.PositionTitle {
+ text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.searchbar {
+    border-radius:5%;
+    width: 50%;
+  font-weight: bold;
+}

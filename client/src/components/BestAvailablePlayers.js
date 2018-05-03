@@ -9,14 +9,15 @@ export default class BestAvailablePlayers extends React.Component {
     console.log(this.props);
     return (
       <div>
-        <div>
-          <i></i> Overall Rankings
+        <div className='PositionTitle'>
+        Overall Rankings
       </div>
 
         <div>
         {/*====== Coming soon: Form for switching Game Format i.e ppr , 0.5 custom... */}
           <div>
             <input
+              className='searchbar'
               type="text"
               placeholder="Search"
               onChange={this.props.search}
@@ -25,7 +26,7 @@ export default class BestAvailablePlayers extends React.Component {
           </div>
         </div>
 
-        <div>
+        <div className='Overall'>
           <AvailablePlayers
             fields={['Rank', 'Tier', 'Pos', 'Name', 'Bye']}
             players={this.props.players}

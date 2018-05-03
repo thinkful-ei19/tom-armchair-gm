@@ -32,10 +32,10 @@ export default class DraftedPlayers extends React.Component {
               onClick={() => this.props.reset()}>
               Reset
           </button>
-            <button
+            {/* <button
               onClick={() => this.save(this.currentDraft)}>
               Save Team & End Draft
-          </button>
+          </button> */}
           </div>
         </div>
         <NFLTable
