@@ -8,41 +8,31 @@ export default class DraftedPlayers extends React.Component {
   render() {
     let currentDraft = 0;
     console.log(this.props)
-    let players 
+    let players
     if (this.props.players) {
-     let players = this.props.players.slice().filter(players => this.props.players.drafted);
+      let players = this.props.players.slice().filter(players => this.props.players.drafted);
       players = players.sort((a, b) => b.drafted - a.drafted);
     }
     console.log(this.props.players);
-   
+
     return (
-      <div className='Draft Results'>
-        <div>
-          Draft History
-      </div>
-
-        <div>
-          <div>
-            <button
-              onClick={() => this.props.undo()}>
-              <i></i> Undo
-          </button>
-
-            <button
-              onClick={() => this.props.reset()}>
-              Reset
-          </button>
-            {/* <button
-              onClick={() => this.save(this.currentDraft)}>
-              Save Team & End Draft
-          </button> */}
-          </div>
+      <div className='column4'>
+        <div className='PositionTitle'>Draft History</div>
+        <div className='buttons'>
+          {/* ======UNDO Button =====  */}
+          <button className='button1' onClick={() => this.props.undo()}>Undo</button>
+          {/* ========= RESET BUTTON ========= */}
+          <button className='button2' onClick={() => this.props.reset()}>Reset</button>
+          {/* =======SAVE TEAM FEATURE ========= */}
+          {/* <button className='button3' onClick={() => this.save(this.currentDraft)}>Save Team & End Draft</button> */}
         </div>
-        <NFLTable
-          fields={['Name', 'Pos', 'Bye']}
-          players={this.props.players}
-          disableColor={true}
-        />
+        <div className='padding-table draft'>
+          <NFLTable
+            fields={['Name', 'Pos', 'Bye']}
+            players={this.props.players}
+            disableColor={true}
+          />
+        </div>
       </div>
     );
   }

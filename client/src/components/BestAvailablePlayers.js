@@ -9,13 +9,9 @@ export default class BestAvailablePlayers extends React.Component {
     console.log(this.props);
     return (
       <div>
-        <div className='PositionTitle'>
-        Overall Rankings
-      </div>
-
-        <div>
-        {/*====== Coming soon: Form for switching Game Format i.e ppr , 0.5 custom... */}
-          <div>
+        <div className='column1'>
+          <div className='PositionTitle'>Best Available</div>
+          <div className='search'>
             <input
               className='searchbar'
               type="text"
@@ -24,16 +20,19 @@ export default class BestAvailablePlayers extends React.Component {
               value={this.props.query}
             />
           </div>
-        </div>
-
-        <div className='Overall'>
-          <AvailablePlayers
-            fields={['Rank', 'Tier', 'Pos', 'Name', 'Bye']}
-            players={this.props.players}
-            draft={(player) => this.props.draft(player)}
-          />
+          <div className='scrollable'>
+            <div className='padding-table'>
+              <AvailablePlayers
+                className='scrollable'
+                fields={['Rank', 'Tier', 'Pos', 'Name', 'Bye']}
+                players={this.props.players}
+                draft={(player) => this.props.draft(player)}
+              />
+            </div>
+          </div>
         </div>
       </div>
+
     )
   }
 

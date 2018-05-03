@@ -19,7 +19,8 @@ export default class NFLTable extends React.Component {
     return players.map((player, i) => {
       //  console.log(player)
       return (
-        <tr key={i} className={i}
+        <tr key={i} 
+          className={('tier'+player.Tier)}
           onClick={() => this.onClick(player)}>
           {this.columns(player)}
         </tr>
@@ -37,7 +38,7 @@ export default class NFLTable extends React.Component {
     
     return this.props.fields.map((f, i) => {
       if (f === 'Tier') {
-        return <td className={i} key={i}>Tier {player[f]}</td>
+        return <td key={i}>Tier {player[f]}</td>
       } else {
         return <td key={i}>{player[f]}</td>
       }
@@ -46,7 +47,7 @@ export default class NFLTable extends React.Component {
 
   render() {
     return (
-      <table>
+      <table className='table-bordered table-striped player-table table-hover pad-below tablesorter'>
         <tbody className="pointer">{this.rows()}</tbody>
       </table>
     );

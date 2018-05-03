@@ -10,61 +10,61 @@ import Spinner from 'react-spinkit';
 import AvailablePlayers from './AvailablePlayers';
 import NFLTable from './NFLTable'
 export class CheatSheet extends React.Component {
-  componentDidMount() {
-    this.props.dispatch(fetchPlayers());
-  }
-  render() {
-    console.log(this.props);
-    if (this.loading) {
-      return (
-        <div className='row'>
-          <Spinner spinnerName="circle" />
-        </div>
-      )
+		componentDidMount() {
+				this.props.dispatch(fetchPlayers());
+		}
+		render() {
+				console.log(this.props);
+				if (this.props.loading) {
+						return (
+								<div className='loading'>
+										Loading
+								</div>
+						)
 
-      // <div className='row'>Loading...</div>) 
-    }
+						// <div className='row'>Loading...</div>)
+				}
 
-    if (this.props.fetchError) {
-      return (<div className='row'>error fetching rankings...</div>)
-    }
-    return (
-      
-      <div className='row cheatSheet'>
-        <BestAvailablePlayers
-          players={this.props.filteredPlayers}
-          draft={(player) => this.props.dispatch(draftPlayerSuccess(player))}
-          fetch={(e) => this.props.dispatch(fetchPlayers(e.target.value))}
-          search={(e) => this.props.dispatch(searchPlayerSuccess(e.target.value))}
-          query={this.props.query}
-        />
+				if (this.props.fetchError) {
+						return (<div className='row'>error fetching rankings...</div>)
+				}
+				return (
 
-        <BestAvailablePlayersByPosition
-          players={this.props.players}
-          draft={(player) => this.props.dispatch(draftPlayerSuccess(player))}
-        />
+					<div className='row cheatSheet table table-bordered table-striped player-table table-hover pad-below tablesorter'>
+								<BestAvailablePlayers
+										players={this.props.filteredPlayers}
+										draft={(player) => this.props.dispatch(draftPlayerSuccess(player))}
+										fetch={(e) => this.props.dispatch(fetchPlayers(e.target.value))}
+										search={(e) => this.props.dispatch(searchPlayerSuccess(e.target.value))}
+										query={this.props.query}
+								/>
 
-        <DraftedPlayers
-          currentDraft={this.props.currentDraft}
-          players={this.props.draftedPlayers}
-          undo={(currentDraft) => this.props.dispatch(undoPlayerSuccess(currentDraft))}
-          reset={() => this.props.dispatch(resetDraftSuccess())}
-          save={() => this.props.save()}
-        />
-      </div>
-    );
-  }
+								<BestAvailablePlayersByPosition
+										players={this.props.players}
+										draft={(player) => this.props.dispatch(draftPlayerSuccess(player))}
+								/>
+
+								<DraftedPlayers
+										currentDraft={this.props.currentDraft}
+										players={this.props.draftedPlayers}
+										undo={(currentDraft) => this.props.dispatch(undoPlayerSuccess(currentDraft))}
+										reset={() => this.props.dispatch(resetDraftSuccess())}
+										save={() => this.props.save()}
+								/>
+						</div>
+				);
+		}
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.draft.players);
-  return {
-    players: state.draft.players,
-    filteredPlayers: state.draft.filteredPlayers,
-    currentDraft: state.draft.currentDraft,
-    query: state.draft.query,
-    draftedPlayers: state.draft.draftedPlayers
-  }
+		console.log(state.draft.players);
+		return {
+				players: state.draft.players,
+				filteredPlayers: state.draft.filteredPlayers,
+				currentDraft: state.draft.currentDraft,
+				query: state.draft.query,
+				draftedPlayers: state.draft.draftedPlayers
+		}
 }
 
 
