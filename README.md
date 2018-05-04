@@ -12,6 +12,7 @@
 
 ----
 ### Technology
+#### ArmChair-GM is built using the MERN stack. It utilizes React and Redux on the front end and Mongo, Express, and Node.js on back end.
 * **ReactJS**
 * **Redux**
 * **React Router**
@@ -25,4 +26,14 @@
 ### App Features
 * Google Authentication/Login
 * Search through expert curated player rankings sorting by best overall & best by position as draft picks are made
-* User team saved to MongoDB
+
+----
+
+### TODOS
+* User Drafted Team is Saved and stored on mongodb
+* Rookie players are tracked as sleepers
+* After draft grade calculated by weighted position/potential points
+* User Team Dashboard displaying team and suggested positions 
+
+
+
