@@ -50,14 +50,16 @@ export const draftReducer = (state = initialState, action) => {
         return Object.assign({}, state, {
             currentDraft: state.currentDraft - 1,
             player: state.players[isDrafted].drafted = null,
-            draftedPlayers: [...state.draftedPlayers - action.player],
+            draftedPlayers: [...state.draftedPlayers.slice(0, state.currentDraft), ...state.draftedPlayers.slice(state.currentDraft + 1)],
             fetchError: null
         });
     } else if (action.type === RESET_DRAFT_SUCCESS) {
-        const isDrafted = state.players.findIndex(players => players.drafted)
+        const isDrafted = state.players.filter(players => players.drafted !== null)
         return Object.assign({}, state, {
             currentDraft: state.currentDraft = 0,
-            player: state.players[isDrafted].drafted = null,
+            player: isDrafted.forEach(function (player) {
+                player.drafted = null
+            }),
             draftedPlayers: state.draftedPlayers = [],
             fetchError: null
         });

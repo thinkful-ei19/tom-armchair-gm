@@ -226,10 +226,12 @@ button {
     padding-top: 6px;
 }
 
-/* .tier1 {
-	background-color: gold;
+.tier1 {
+    font-weight: 700;
+    font: outline;
+    font-style: italic;
 }
 
 .tier2 {
-	background-color: silver
-} */
+    font-style: italic;
+}

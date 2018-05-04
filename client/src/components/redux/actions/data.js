@@ -58,7 +58,7 @@ export const resetDraftSuccess = () => ({
 
 
 export const fetchPlayers = () => (dispatch, getState) => {
-    dispatch(fetchPlayersRequest());
+  dispatch(fetchPlayersRequest())
     const url = `${API_BASE_URL}/rankings`;
     fetch(url, {
         method: 'GET',
