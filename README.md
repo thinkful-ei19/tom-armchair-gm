@@ -24,4 +24,5 @@
 ----
 ### App Features
 * Google Authentication/Login
+* Search through expert curated player rankings sorting by best overall & best by position as draft picks are made
 * User team saved to MongoDB
