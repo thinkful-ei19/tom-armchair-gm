@@ -2,7 +2,7 @@
 
 ----
 
-### [Live App]('url')
+### [Live App]('https://armchair-gm.netlify.com/')
 
 
 > This app will allow you to draft your next fantasy football team alongside your live draft to have realtime player rankings from FantasyPro's Expert Consensus.

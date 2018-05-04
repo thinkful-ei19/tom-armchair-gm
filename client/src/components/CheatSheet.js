@@ -12,11 +12,24 @@ import NFLTable from './NFLTable'
 export class CheatSheet extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchPlayers());
+    console.log(`%c
+
+ /$$$$$$$$                            /$$   /$$           /$$                                    /$$      
+|__  $$__/                           | $$  | $$          | $$                                   | $$      
+   | $$  /$$$$$$  /$$$$$$/$$$$       | $$  | $$  /$$$$$$ | $$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$ | $$   /$$
+   | $$ /$$__  $$| $$_  $$_  $$      | $$$$$$$$ |____  $$| $$__  $$ /$$__  $$ /$$__  $$|____  $$| $$  /$$/
+   | $$| $$    $$| $$   $$   $$      | $$__  $$  /$$$$$$$| $$    $$| $$    $$| $$    _/ /$$$$$$$| $$$$$$/ 
+   | $$| $$  | $$| $$ | $$ | $$      | $$  | $$ /$$__  $$| $$  | $$| $$  | $$| $$      /$$__  $$| $$_  $$ 
+   | $$|  $$$$$$/| $$ | $$ | $$      | $$  | $$|  $$$$$$$| $$$$$$$/|  $$$$$$/| $$     |  $$$$$$$| $$    $$
+   |__/   _____/ |__/ |__/ |__/      |__/  |__/  ______/|_______/    _____/ |__/        ______/|__/    _/
+                                                                                                          
+                                                                                                          
+                                                                                                           `, "font-family:monospace");
+
+console.log("%chttps://www.linkedin.com/in/tom-h-759579a5", "color: blue; font-size: x-large");
   }
   render() {
-    console.log(this.props);
     if (this.props.loading) {
-      console.log('loading')
       return <Spinner Name="circle" fadeIn='none' />;
     }
 
@@ -52,7 +65,6 @@ export class CheatSheet extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.draft.players);
   return {
     players: state.draft.players,
     filteredPlayers: state.draft.filteredPlayers,
